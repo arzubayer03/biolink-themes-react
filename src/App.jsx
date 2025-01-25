@@ -1,0 +1,27 @@
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css'
+// import Home from './components/home';
+import Basic from './components/basic';
+import SkyBlue from './components/skyBlue';
+import Colorful from './components/colorful';
+import Desert from './components/desert';
+import Minimal from './components/minimal';
+import Ocean from './components/ocean';
+function App() {
+
+  return (
+    <>
+      <div className='flex gap-2'>
+          <Basic/>
+          <SkyBlue/>
+          <Ocean/>
+          <Colorful/>
+          <Desert/>
+          <Minimal/>
+        </div>
+    </>
+  )
+}
+
+export default App
