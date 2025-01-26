@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
-// import Home from './components/home';
-import Basic from './components/basic';
+import Basic from './components/Basic';
 import SkyBlue from './components/skyBlue';
 import Colorful from './components/colorful';
 import Desert from './components/desert';
