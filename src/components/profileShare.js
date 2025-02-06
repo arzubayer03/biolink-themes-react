@@ -1,4 +1,3 @@
-import logo from "./img/logo.png";
 import qrCode from "./img/qrCode.png";
 
 const profileShare= document.createElement("section");

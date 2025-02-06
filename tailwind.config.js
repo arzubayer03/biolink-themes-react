@@ -5,10 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    
     extend: {
       container: {
         padding: '4rem',
         center: true,
+      },
+      aspectRatio: {
+        '19-5-9': '19.5 / 9', 
       },
       colors:{
         stone: {
@@ -47,16 +51,19 @@ export default {
         sky:{
           primary: "#00AEEF",
           secoundary: "#00658A"
-        }
+        },
+        
       },
       backgroundImage: {
-        'theme1-bg': "url('../src/components/img/theme1bg.png')",
-        'theme2-bg': "url('../src/components/img/theme2bg.png')",
-        'theme3-bg': "url('../src/components/img/theme3bg.png')",
-        'theme4-bg': "url('../src/components/img/theme4bg.png')",
-        'theme5-bg': "url('../src/components/img/theme5bg.png')"
+        'basic': "url('../src/components/img/basic-bg.png')",
+        'skyblue': "url('../src/components/img/skyblue.png')",
+        'ocean': "url('../src/components/img/Ocean.png')",
+        'colorful': "url('../src/components/img/colorful.png')",
+        'desert': "url('../src/components/img/desert.png')"
       }
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
