@@ -1,6 +1,6 @@
 // Code for the App component of the biolink-themes
 import './App.css';
-// import Home from './components/home';
+
 import Basic from './components/Basic';
 import Colorful from './components/Colorful';
 import Colorful2 from './components/Colorful2';
