@@ -15,7 +15,7 @@ function Minimal() {
                 </button>
               </div>
               {/* cover photo with share button */}
-            <div className="bg-green-200 w-full max-w-md h-32 relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
+            <div className="bg-green-200 w-full max-w-md h-34 relative overflow-hidden rounded-tl-2xl rounded-tr-2xl">
               
               {/* cover photo */}
               <div className="">

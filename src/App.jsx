@@ -13,7 +13,7 @@ function App() {
   return (
     
       <div className=' flex items-center justify-center h-screen w-full py-7 px-3'>
-          <Basic />
+          <SkyBlue />
         </div>
   )
 }
