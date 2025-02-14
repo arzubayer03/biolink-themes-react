@@ -1,14 +1,13 @@
 
 import logo from "./img/logo.png";
 import data from "./data";
-const profilePic = 'https://images.pexels.com/photos/8319937/pexels-photo-8319937.jpeg?auto=compress&cs=tinysrgb&w=600';
-const coverPhoto = " " ;
-
 
 function Minimal() {
   const { biolinkProfile, Links, socialMediaLinks } = data;
+  const bgColor = ["bg-red-primary", "bg-green-primary", "bg-indigo-600", "bg-yellow-primary","bg-pink-primary", "bg-blue-primary", "bg-cyan-primary"];
+
   return (
-     <div className="h-full w-full max-w-sm  bg-teal-500  bg-cover bg-center flex flex-col rounded-xl relative scrollbar-hide ">
+     <div className="h-full w-full max-w-sm  bg-teal-600  bg-cover bg-center flex flex-col rounded-xl relative scrollbar-hide ">
           <div className="absolute top-4 right-4 z-10">
                 <button className="p-1 rounded-full bg-gradient-to-tl from-cyan-700 to-cyan-400 flex items-center justify-center">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="size-5">
@@ -20,9 +19,9 @@ function Minimal() {
                {/* cover photo with share button */}
           <div className="bg-green-200 relative w-full max-w-md h-44 rounded-tl-xl rounded-tr-xl overflow-hidden">
                     {/* cover photo */}
-                    {coverPhoto && (
+                    {biolinkProfile.coverPhoto && (
                         <img 
-                          src={coverPhoto} 
+                          src={biolinkProfile.coverPhoto} 
                           className="w-full max-w-md bg-cover bg-center" 
                           alt="" 
                         />
@@ -32,10 +31,10 @@ function Minimal() {
         {/* Profile Photo */}
           <div className="relative -mt-12 flex justify-center">
             <div className="w-24 h-24 bg-white rounded-full">
-              {profilePic && (
+              {biolinkProfile.profilePhoto && (
                 <img className="w-24 h-24 rounded-full object-cover" 
-                src={profilePic} 
-                alt="Profile Photo" />
+                src={biolinkProfile.profilePhoto} 
+                 />
                 )}
                   
                </div>
@@ -54,23 +53,25 @@ function Minimal() {
               </p>
             </div>
                 {/* Custom website Links */}
-            <div className="mt-4 mb-2 ">
-            {Links && Object.keys(Links).length > 0 ? (
-              Object.keys(Links).map((key) => {
-              const link = Links[key];
-                return (
-                    <div key={link.id} className="mb-2">
-                      <h3 className="text-black text-center font-semibold mb-1">
-                        {link.title}
-                      </h3>
-                      <a href={link.url} className="block bg-red-primary text-white text-center py-2 rounded">
-                        {link.name}
-                      </a>
-                    </div>
-                  );
-                })
-              ) : null} 
-          </div>
+                <div className="mt-4 mb-2 ">
+                  {Links && Object.keys(Links).length > 0 ? (
+                  Object.keys(Links).map((key, index) => { // Add index here
+                    const link = Links[key];
+                    const bgClass = bgColor[index % bgColor.length]; // Get bgColor based on index
+                    return (
+                     <div key={link.id} className="mb-2">
+                     <h3 className="text-black text-center font-semibold mb-1">
+                         {link.title}
+                           </h3>
+                     <a href={link.url} className={`block ${bgClass} text-white text-center py-2 rounded`}> {/* Use dynamic bgClass here */}
+                       {link.name}
+                       </a>
+                      </div>
+                       );
+                       })
+                       ) : null}
+                 </div>
+                
 
             {/* Social Media Links */}
             <div className="flex flex-wrap justify-center gap-2 my-3 ">

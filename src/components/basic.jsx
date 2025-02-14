@@ -1,4 +1,6 @@
 import logo from "./img/logo.png";
+import QrCode from "./QR-code";
+
 import  data  from "./data";
 
 
@@ -7,6 +9,7 @@ function Basic() {
 
   return (
          <div className="h-full w-full max-w-sm bg-basic bg-cover bg-center flex flex-col rounded-xl relative  ">
+              {/* share button */}
               <div className="absolute top-4 right-4 z-10">
                     <button className="p-1 rounded-full bg-gradient-to-tl from-cyan-700 to-cyan-400 flex items-center justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="size-5">
@@ -14,8 +17,14 @@ function Basic() {
                       </svg>
                     </button>
                   </div>
-                  {/* cover photo with share button */}
-                  <div className="bg-green-200 relative w-full max-w-md h-44 rounded-tl-xl rounded-tr-xl overflow-hidden">
+
+                  {/*qr code */}
+                  <div className=" absolute z-10 max-w-sm w-full p-1 bottom-0">
+                    <QrCode />
+                  </div>
+
+                  {/* cover photo  */}
+                  <div className="bg-gray-600 relative w-full max-w-md h-44 rounded-tl-xl rounded-tr-xl overflow-hidden">
                     {/* cover photo */}
                     {biolinkProfile.coverPhoto && (
                         <img 

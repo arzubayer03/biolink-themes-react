@@ -39,13 +39,13 @@ function Colorful() {
         
             {/* Profile Name */}
             <div className="text-center mt-2 mb-1">
-              <h2 className="text-xl font-semibold">{biolinkProfile.name}</h2>
+              <h2 className="text-xl font-semibold text-black">{biolinkProfile.name}</h2>
             </div>
     
           {/*Scrollable section*/}
           <div className=" px-4 overflow-y-auto scrollbar-hide  h-full"> 
             <div>
-              <p className="text-black text-center leading-5 ">
+              <p className=" text-center leading-5 text-black ">
               {biolinkProfile.bio}
               </p>
             </div>

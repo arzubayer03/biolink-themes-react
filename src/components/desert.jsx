@@ -47,7 +47,7 @@ function Desert() {
           {/*Scrollable section*/}
           <div className=" px-4 overflow-y-auto scrollbar-hide  h-full"> 
             <div>
-              <p className="text-black text-center ">
+              <p className="text-black text-center leading-5">
               {biolinkProfile.bio}
               </p>
             </div>
